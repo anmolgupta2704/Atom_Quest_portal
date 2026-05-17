@@ -26,10 +26,9 @@ export default function CheckIn({ user }) {
     setTimeout(() => setSaved(false), 3000);
   };
 
-  const isWindowOpen = (q) => {
-    const windows = { Q1: 'July', Q2: 'October', Q3: 'January', Q4: 'March/April' };
-    return q === CURRENT_QUARTER;
-  };
+ const isWindowOpen = (q) => {
+  return q === CURRENT_QUARTER;
+};
 
   return (
     <div>
