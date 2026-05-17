@@ -20,10 +20,10 @@ export default function ManagerDashboard({ user }) {
   const getApproved = (empId) => getEmpGoals(empId).filter(g => g.status === 'approved');
 
   const selectedMember = teamMembers.find(m => m.id === selectedEmpId);
-  const selectedGoals = selectedEmpId ? getEmpGoals(selectedEmpId) : [];
+ 
   const pendingGoals = selectedEmpId ? getPending(selectedEmpId) : [];
   const approvedGoals = selectedEmpId ? getApproved(selectedEmpId) : [];
-  const displayGoals = pendingGoals.length > 0 ? pendingGoals : approvedGoals;
+ 
 
   const openApproval = (empId) => {
     setSelectedEmpId(empId);
